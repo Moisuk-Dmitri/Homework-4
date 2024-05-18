@@ -11,8 +11,8 @@ public class Main {
 
         System.out.println("Task 2");
 
-        int tempCelsius = 6;
-        if (tempCelsius >= 5) {
+        int tempCelsius = 5;
+        if (tempCelsius > 5) {
             System.out.println("На улице " + tempCelsius + " градусов, можно идти без шапки");
         } else {
             System.out.println("На улице " + tempCelsius + " градусов, нужно надеть шапку");
@@ -54,14 +54,10 @@ public class Main {
         System.out.println("Task 6");
 
         int amountOfPeople = 34;
-        int carriageCapacity = 102;
-        int amountOfSeats = 60;
-        boolean isSeatPlaceLeft = amountOfPeople < amountOfSeats;
-        boolean isStandingPlaceLeft = isSeatPlaceLeft || (carriageCapacity > amountOfPeople);
-        if (isSeatPlaceLeft) {
+        if (amountOfPeople < 60) {
             System.out.println("В вагоне остались сидячие места");
-        } else if (isStandingPlaceLeft) {
-            System.out.println("В вагоне остались стоячие места");
+        } else if (amountOfPeople < 102) {
+            System.out.println("В вагоне остались стоячие места, сидячих мест нет");
         } else {
             System.out.println("В вагоне не осталось мест");
         }
